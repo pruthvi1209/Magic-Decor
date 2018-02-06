@@ -1,0 +1,19 @@
+thead td{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, Serif;
+    color: crimson;
+}
+caption h3{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, Serif;
+    color: darkblue;
+}
+h4{
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, Serif;
+}

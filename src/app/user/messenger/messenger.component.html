@@ -1,0 +1,74 @@
+<div class="fullpage">
+  <div class="heading">
+    <h4>Write your Query/Feedback here</h4>
+  </div>
+  <div class="contents">
+      <div class="container">
+        <div class="row show-grid">
+          <div class="col-md-6">
+            <div class="col-md-12"><br><br><br>
+              <form>
+                <span class="message_status" *ngIf = "msgSent == true"><img *ngIf = "status == null" height = "20" width = "20" src = "../../assets/images/msgLoading.gif">{{status}}</span>
+                  <div class="form-group">
+                    <div class="row">
+                          <div class="form-group col-lg-8">
+                              <label>Subject</label>
+                              <input type="text" class="form-control input-sm" name = "msgSubject" [(ngModel)]="msgSubject">
+                          </div>
+                    </div>
+                    <div class="row">
+                          <div class="form-group col-lg-8">
+                              <label>Message</label>
+                              <textarea class="form-control" name = "msgBody" [(ngModel)]="msgBody"></textarea>
+                          </div>
+                    </div>
+                    <button class="btn btn-primary" (click)="sendMsg()">Send</button><br><br><br>
+                  </div>
+                </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="col-md-12">
+                  <p><img class="customer" src="../../assets/images/cust.png"></p>
+            </div>
+          </div>    
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+<p>Your suggestions and feedbacks are very important to us...</p>
+  <form>
+    <span class="message_status" *ngIf = "msgSent == true"><img *ngIf = "status == null" height = "20" width = "20" src = "../../assets/images/msgLoading.gif">{{status}}</span>
+    <div class="form-group">
+      <h3>Write your query / Feedback here</h3>
+       <div class="row">
+            <div class="form-group col-lg-5">
+                <label>Subject</label>
+                <input type="text" class="form-control input-sm" name = "msgSubject" [(ngModel)]="msgSubject">
+            </div>
+       </div>
+        <div class="row">
+            <div class="form-group col-lg-5">
+                <label>Message</label>
+                <textarea class="form-control" name = "msgBody" [(ngModel)]="msgBody"></textarea>
+            </div>
+        </div>
+      
+<img align="right" src="../../assets/images/cust.png">      
+      <button class="btn btn-primary" (click)="sendMsg()">Send</button><br><br>
+    </div>
+  </form>
+</div>-->

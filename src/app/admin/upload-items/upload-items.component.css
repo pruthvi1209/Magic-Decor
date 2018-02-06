@@ -1,0 +1,36 @@
+.head,label{
+  font-weight: bold; 
+  font-family: Georgia, Serif;
+}
+label{
+    font-style: italic;
+}
+.card{
+   box-shadow: 0 1px 30px rgba(0,0,0,.3);
+   padding : 5%;
+}
+.container{
+    font-weight: bold;
+    color:black;
+    font-family: Georgia, Serif;
+}
+.but{
+    text-align: center;
+}
+
+button{
+    width: 150px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+.input-group-addon{
+    min-width: 200px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(43, 206, 235);
+}
+.input-group{
+    margin: 10px;
+}

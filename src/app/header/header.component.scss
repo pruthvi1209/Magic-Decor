@@ -1,0 +1,83 @@
+h1,h2 {
+	font-weight: bold;
+}
+
+p{
+	font-size: 16px;
+	color: #cdcdcd;
+}
+
+li{
+    &.activelink{
+    background: #27A967;
+  }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.navbar{
+    margin: 0;
+    color: #343436;
+}
+
+.brand{
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+}
+
+.navbar-inverse {
+	background: #343436;
+    border: 0;
+    .navbar-nav { 
+            li{
+                a {
+                    color: #f7f7f7;
+                    font-size: 16px;
+                    &:hover {
+                        background: #27A967;
+                    }
+                }
+
+            }
+            .dropdown-menu{
+                li{
+                    a{
+                        &:hover {
+                            background: #2C463C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.dropdown-menu {
+	background: #343436;
+	border-radius: 0;
+    border: 0;
+    li{ 
+        a{
+        padding: 10px;
+        }
+    }
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+    margin-bottom: 5px;
+    &:hover {
+        color: #27A967;
+        background-color: white;
+        border-color: white;
+    }
+    
+}
+
+.glyphicon-large {
+    font-size: 100px;
+}

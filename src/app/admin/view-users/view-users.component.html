@@ -1,0 +1,53 @@
+<div class="container float-right">
+<div class="row" style="padding-left:20%">
+<h4>Total number of Users : {{datalen}}</h4>
+  <hr>
+<div class="col-md-8 col-sm-8 col-xs-10">
+<br>
+<div class="table-responsive">
+<table class="table table-striped table-bordered table-hover">
+  <caption><h3>Admins</h3></caption>  
+  <thead>
+    <td>S. No</td>
+    <td>ID</td>
+    <td>Name</td>
+    <td>User's Password</td>
+  </thead>
+  <tbody *ngFor="let d of data; let i=index">
+  <tr *ngIf="d.accountType == 'admin'">
+    <td>{{i+1}}</td>
+    <td>{{d._id}}</td>
+    <td>{{d.name}}</td>
+    <td>{{d.pass}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="col-md-8 col-sm-8 col-xs-10">
+<br><br>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+  <caption><h3>Users</h3></caption>
+  <thead>
+    <td>S. No</td>
+    <td>ID</td>
+    <td>Name</td>
+    <td>User's Password</td>
+  </thead>
+  <tbody *ngFor="let d of data; let i=index">
+  <tr *ngIf="d.accountType == 'user'">
+    <td>{{i+1}}</td>
+    <td>{{d._id}}</td>
+    <td>{{d.name}}</td>
+    <td>{{d.pass}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+

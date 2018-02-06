@@ -1,0 +1,209 @@
+.fullpage{
+    display:block;
+    width:100%; 
+}
+.heading{
+    width:100%; 
+    display:block;
+    color: white;
+    background-color: darkorange;
+    padding: 2px;
+}
+
+.contents
+{
+    background: #ededed;
+    width:100%; 
+    height:100%; 
+    display:block; 
+}
+#playArea{
+  padding: 10px;
+}
+#myCanvas{
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+  margin-top:7px;
+}
+.glyphicon {
+  font-size: 35px;
+  color : black;
+  margin-top: -5px;
+}
+i{
+  padding-left : 1%;
+  padding-right: 1%;
+  padding-top : 1%;
+  padding-bottom : 0.8%;
+  border-radius: 2px;
+}
+.glyphicon:hover{
+   box-shadow: 0 1px 30px rgba(0,0,0,.5);
+}
+i:hover{
+   box-shadow: 0 1px 5px rgba(0,0,0,.5);
+ transform: scale(1.05);
+ transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+#scrolllayout {
+  width:100%;
+  height:618px;
+  margin: auto;
+  background:white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space:nowrap;
+  box-shadow:0 0 10px #000;
+}
+#scrollobject {
+  width:100%;
+  height:618px;
+  margin: auto;
+  background:white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space:nowrap;
+  box-shadow:0 0 5px #000;
+}
+
+.block{
+  margin: 10px;
+  width:90%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+.active{
+  margin: 10px;
+  width:90%;
+  height: auto;
+  display: block;
+  box-shadow:0 0 5px #000;
+  cursor: pointer;
+}
+
+.scrollhead{
+  display: block;
+  text-align: center;
+  font-size: 100%;
+}
+
+#scrollobject::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#scrollobject::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#scrollobject::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #333333;
+}
+#scrolllayout::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#scrolllayout::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#scrolllayout::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #333333;
+}
+#scrolllayout:-webkit-full-screen { 
+  /* properties */
+  height:1000px;
+}
+
+#controls{
+  margin: 10px;
+  padding: 0px;
+  color: ivory;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3{
+  font-family: Georgia, Serif;
+  margin-bottom: 0;
+}
+.modal-body{
+  height: 70vh;
+  padding: 20px;
+}
+
+.modal-footer, .tools{
+  text-align: center;
+}
+
+.btn-round-lg{
+  border-radius: 22.5px;
+  }
+
+.frame {
+  margin: auto;
+  height: 90%;
+  width: 100%;  
+  text-align: center;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.controls {
+  width: 98%;
+  vertical-align: middle;
+}
+:fullscreen { 
+  /* properties */
+  height: 100vh;
+  
+}
+#fullscreen:fullscreen
+{
+display: none;
+}
+h4,kbd{
+  font-family: Georgia, Serif; 
+   text-align: center;
+   font-weight : bold;
+}
+kbd{
+  font-style: italic;
+}
+.modal-title{
+  font-style: italic;
+}
+#preview{
+  margin-left : 10%;
+}
+label{
+  font-family: Georgia, Serif; 
+  font-style: italic;    
+  color :black;
+}
+warning
+{
+  color: red;
+  font : italic;
+}

@@ -1,0 +1,69 @@
+.parallax {
+    /* The image used */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../../assets/images/background.jpg");
+
+    /* Set a specific height */
+    min-height: 714px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.main
+{
+    padding-top: 15%;
+    color:ivory;
+    /* padding-right: 50%; */
+    font-size: 30px;
+    width : 70%;
+    margin-left:15%;
+    text-align:center; 
+    margin-bottom: 20px;
+    font-family: Georgia, Serif;
+    font-weight:bold;
+    font-style: italic;
+}
+
+.btn{
+    border: 2px solid  orange;
+    font-family: Georgia, Serif;  
+    font-size: 12pt;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-right: 15px;
+    color : orange;
+}
+.btn-full{
+    font-weight: bold;
+}
+.button-awesome{
+    margin-top: 40px;
+}
+.btn-full:hover{
+    background-color: orange;
+    color:ivory;
+    transition: all 0.5 ease-in;
+}
+
+.video
+{
+    margin-left:5%;
+    height: 500px;
+    width: 90%;
+}
+
+.row{
+    margin: 30px 100px 10px 100px;
+}
+
+#closebtn{
+    border-radius: 100px;
+    float: right;
+    background-color: orange;
+}
+iframe{
+    margin-left: 20%;
+}

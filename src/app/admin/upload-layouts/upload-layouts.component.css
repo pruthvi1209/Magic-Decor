@@ -1,0 +1,38 @@
+.modal-content{
+min-width: 1000px
+}
+#webgl-container{
+    width: 90%;
+}
+.input-group-addon{
+    min-width: 200px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(43, 206, 235);
+}
+.input-group{
+    margin:10px;
+}
+.row,.but{
+    text-align: center;
+}
+h4{
+      font-family: Georgia, Serif;
+      font-style: italic;
+      font-weight: bold;
+}
+
+h3,h2{
+    font-weight: bold;
+    font-family: Georgia, Serif;
+}
+.head{
+  font-weight: bold; 
+  font-family: Georgia, Serif;
+}
+button{
+    width: 200px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: 15px;
+}

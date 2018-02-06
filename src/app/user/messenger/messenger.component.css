@@ -1,0 +1,83 @@
+.heading h4{
+    font-style: italic;
+    color: white;
+    font-family: Georgia, Serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fullpage{
+    display:block;
+    width:100%; 
+}
+.heading{
+    width:100%; 
+    display:block;
+    color: white;
+    background-color: darkorange;
+    padding: 2px;
+}
+
+.contents
+{
+    background: #ededed;
+    width:100%; 
+    height:100%; 
+    display:block; 
+}
+label{
+   font-family: Georgia, Serif;
+    font-style: italic;
+}
+button{
+    font-weight: bold;
+}
+.message_status{
+    display: block;
+    padding: 20px;
+    background:#94FC91;
+    color:green;
+    border:1px solid green;
+    border-radius:3px;
+}
+form{
+    padding-top: 60px;
+}
+.customer{
+    width: 80%;
+    height: auto;
+}
+
+form{
+    box-shadow: 0 1px 30px rgba(0,0,0,.3);
+}
+.form-group{
+    padding-left : 8%;
+}
+
+
+/*.message_status{
+    display: block;
+    padding: 20px;
+    background:#94FC91;
+    color:green;
+    border:1px solid green;
+    border-radius:3px;
+}
+h3{
+    Padding-top : 5%;
+    color : ivory;    
+}
+.container{
+    font-style: italic;
+    font-family: Georgia, Serif;
+}
+label{
+    color : dodgerblue;
+    padding-top :3%;
+}
+p{
+    padding-top : 32%;        
+    text-align: right;
+    color : ivory;
+}*/

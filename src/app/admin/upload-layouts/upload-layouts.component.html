@@ -1,0 +1,62 @@
+<h3 class="head">UPLOAD LAYOUTS</h3>
+<div class="row">
+   <div class="col-md-6">
+      <form action="https://magicdecorapi.azurewebsites.net/api/upload" (submit)="this.submit()" method="POST" enctype="multipart/form-data" ngNativeValidate>
+            <div class="input-group">
+            <input type="text" name="type" value="layout" hidden>
+            <table ><tr><td style="padding: 2%;">
+            <h4>Select Layout Category </h4></td><td>
+            <select class="form-control" name="category" required>
+                <option value="">----------- Select ----------</option>
+                <option>Living Room</option>
+                <option>Bedroom</option>
+                <option>Dining Room</option>
+                <option>Study Room</option>
+                <option>Home Theatre</option>
+                <option>Bathroom</option>
+            </select></td></tr></table>
+        </div><br>
+        <h4>Select images to create a new Layout...</h4>
+        <div class="input-group">
+            <span class="input-group-addon">Name of Layout</span>
+            <input type="text" class="form-control" name="name" maxlength="25" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Right wall</span>
+            <input type="file" class="form-control" name="right" (change)="set($event,'right')" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Left wall</span>
+            <input type="file" class="form-control" name="left" (change)="set($event,'left')" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Top wall</span>
+            <input type="file" class="form-control" name="top" (change)="set($event,'top')" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Floor</span>
+            <input type="file" class="form-control" name="bottom" (change)="set($event,'bottom')" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Front wall</span>
+            <input type="file" class="form-control" name="front" (change)="set($event,'front')" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Image for Back wall</span>
+            <input type="file" class="form-control" name="back" (change)="set($event,'back')" required>
+        </div>
+        <div class="input-group">
+            <input type="text" id="thumbnail" name="thumbnail" hidden  required>
+        </div>
+        <div class="but">
+            <button type="submit" (click)="screenshot()" class="btn btn-lg btn-warning">Upload Layout</button>
+        </div>       
+      </form>
+    </div>
+
+    <div class="col-md-6" id="preview">
+        <h4>View your Layout preview here</h4>
+            <div id="webgl-container"></div>
+    </div>
+    
+</div>

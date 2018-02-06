@@ -1,0 +1,16 @@
+{
+    "short_name" : "MagicDecor",
+    "name" : "Magic Decor Angular 5",
+    "start_url" : "/",
+    "theme_color" : "black",
+    "background_color" : "#27a967",
+    "display" : "standalone",
+    "orientation" : "portrait",
+    "icons" : [
+        {
+            "src" : "/assets/logo.png",
+            "sizes" : "512x512",
+            "type" : "image/png"
+        }
+    ]
+}

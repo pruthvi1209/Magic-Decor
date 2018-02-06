@@ -1,0 +1,28 @@
+
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div class="fullpage">
+  <div class="heading">
+      <h4>{{category | uppercase}}</h4>
+  </div>
+  <div class="contents">
+    <div class="container"><br><br>
+      <div class="row show-grid">
+        <div *ngFor="let d of layouts">
+          <div class="col-md-4" *ngIf="d.layoutCategory == category">
+              <div class="panel">
+                  <div class="panel-image">
+                    <a routerLink="../../canvas" (click)="walls(d.name)" data-title='{{d.imageURL}}'>
+                      <img src='{{d.thumbnail}}' alt='{{d.imageURL}}'/>
+                        <div class="panel-footer">                        
+
+                        <p>{{d.name}}</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

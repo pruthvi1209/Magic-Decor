@@ -1,0 +1,24 @@
+.message{
+    padding:20px;
+    float:left;
+    margin:auto;
+    border:1px solid #ddd;
+    border-radius:3px;
+    background: #efefef;
+    font-family:sans-serif;
+    margin-top: 15px;
+    display: block;
+}
+.msgSection{
+    max-height: 800px;
+}
+.status{
+    color:#090;
+}
+.head{
+  font-weight: bold; 
+  font-family: Georgia, Serif;
+}
+.panel{
+    margin-top:15px;
+}

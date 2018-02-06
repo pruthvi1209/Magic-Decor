@@ -1,0 +1,103 @@
+<div class="container">
+    <ng4-loading-spinner> </ng4-loading-spinner>
+  <div class="col-lg-12 col-sm-12">
+      
+    <div class="card hovercard">
+        <div class="useravatar">
+            <img src='https://social.mindtree.com/User%20Photos/Profile%20Pictures/{{photoname}}_MThumb.jpg?t=63646089488' >
+          </div>
+      <div class="card-background">
+            <div class="card-info">
+              <span id="name" class="card-title">{{name | uppercase}}</span>
+            </div>
+      </div>
+     
+      
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+      
+      <div class="btn-group" role="group">
+        <button type="button" id="following" class="btn btn-default" href="#tab1" data-toggle="tab" >
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <div class="hidden-xs">Your projects</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          <div class="hidden-xs">Favorites</div>
+        </button>
+      </div>
+     
+      <div class="btn-group" role="group">
+        <button type="button" id="stars" class="btn btn-default" href="#tab3" data-toggle="tab">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          <div class="hidden-xs">Conversations</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="well">
+      <div class="tab-content">
+      <div class="tab-pane fade in" id="tab1">
+        <div class="row" >
+          <div class="col-md-6" *ngFor="let project of myprojects">
+            <a  (click)="openProject(project._id)">
+              <div class="card">
+                      <img id="effect" src="{{project.preview}}" class="card-img-top" style="width:450px ;height: 250px;">
+                        <div class="card-footer">
+                          <h4 align="center" style="color:darkred"><label>{{project.name}}</label></h4>
+                            <p>
+                              <label>Description :</label>{{project.desc}}<br>
+                              <label>Created on :</label>{{project.ctime}}<br>
+                              <label>Layout Used :</label>{{project.roomName}}<br>
+                              <label *ngIf = 'project.lastModified'>Last lastModified on : </label> {{project.lastModified}}<br>
+                            </p>
+                        </div>
+              </div>       
+            </a>
+          </div>
+          <div *ngIf="myprojects.length==0">
+            <h3><img src="../../../assets/images/nothing.png" height="50" width="50">You do not have any Rooms Designed yet! <br>Try decorating your Room in the Canvas.</h3>
+          </div>
+        </div>
+        </div>
+
+        <div class="tab-pane fade in" id="tab2">
+          <div class="row" >
+          <div class = "col-md-6" *ngFor="let project of myprojects">
+            <div *ngIf = "project.fav == true" (click)="openProject(project._id)">
+            <div class = "card" *ngIf = "project.fav == true" >
+              <img id="effect" src="{{project.preview}}" style="width:450px ;height: 250px;">            
+              <div *ngIf = "project.fav == true" class = "card-footer">
+              <h4 align="center" style="color:darkred"><label>{{project.name}}</label></h4>
+              <label>Created on :</label>{{project.ctime}}
+              <br>
+                  <label>Description :</label>{{project.desc}}
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+         <div *ngIf="myprojects.length==0">
+            <h3><img src="../../../assets/images/nothing.png" height="50" width="50">Looks like you do not have anything as Favorite!</h3>
+          </div>
+        </div>
+       
+        <div class="tab-pane fade in" id="tab3">
+        <div class = "row"  *ngFor = "let chat of chats">
+          <div class = "panel panel-default chatPanel" [ngStyle] = "{'float': chat.sender_name == 'admin'?'left': 'right'}" *ngIf = "(chat.sender_name == 'admin' && sessionusername == chat.receiver_id) || sessionusername == chat.sender_id">
+            <div class = "panel-heading">
+              <i><b *ngIf = "chat.sender_name == 'admin'">{{chat.sender_name}}</b></i>
+              <i><b *ngIf = "chat.sender_name != 'admin'">You</b></i>
+              <span [ngStyle] = "{'float': 'right'}">{{chat.chatDate}}</span>
+            </div>
+          <div class = "panel-body" [ngStyle] = "{'background': chat.sender_name == 'admin'?'#fff': '#C4EBFF'}">
+            {{chat.chat}}
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

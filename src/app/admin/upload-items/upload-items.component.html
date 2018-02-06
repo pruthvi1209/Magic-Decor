@@ -1,0 +1,75 @@
+<h3 class="head">ITEMS UPLOAD</h3><br>
+<div class="container">
+  <div class="card">
+<form action="https://magicdecorapi.azurewebsites.net/api/upload" (submit)="this.submit()" method="POST" enctype="multipart/form-data"
+  ngNativeValidate>
+  <div class="input-group">
+    <label for="ItemName">Item Name</label>
+    <input type="text" class="form-control" id="ItemName" name="name" placeholder="Name of the item being uploaded" required>
+  </div>
+  <div class="input-group">
+    <label for="itemtype">Select Item type : </label>
+    <select class="form-control" name="itemtype" id="itemtype" required>
+      <option value="">------ Select -----</option>
+      <option>Chair</option>
+      <option>Bed</option>
+      <option>Table</option>
+      <option>Sofa</option>
+      <option>Lamp</option>
+      <option>TV</option>
+    </select>
+  </div>
+  <div class="input-group">
+      <input type="text" name="category" id="category" hidden>
+      <input type="text" name="type" value="item" hidden>
+      <label>Tick the layouts in which this item will be visible</label>
+  </div>
+  <div class="form-row">
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Living Room">
+      <label class="form-check-label" for="inlineCheckbox1">Living Room</label>
+    </div>
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Dining Room">
+      <label class="form-check-label" for="inlineCheckbox2">Dining Room</label>
+    </div>
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Bedroom">
+      <label class="form-check-label" for="inlineCheckbox3">Bedroom</label>
+    </div>
+
+  </div>
+  <div class="form-row">
+
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Study Room">
+      <label class="form-check-label" for="inlineCheckbox3">Study Room</label>
+    </div>
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Home Theatre">
+      <label class="form-check-label" for="inlineCheckbox3">Home Theatre</label>
+    </div>
+    <div class="form-check form-check-inline col-md-4">
+      <input class="form-check-input" type="checkbox" value="Bathroom">
+      <label class="form-check-label" for="inlineCheckbox3">Bathroom</label>
+    </div>
+
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Thumbnail</span>
+    <input type="file" accept="image/*" class="form-control" name="thumbnail" required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Texture Image</span>
+    <input type="file" accept="image/*" class="form-control" name="texture" required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">JS file of the Item</span>
+    <input type="file" accept="js/*" class="form-control" name="jsfile" required>
+  </div>
+  <div class="but">
+   <button type="submit" (click)="exefunction()" class="btn btn-lg btn-warning">Submit</button>
+  </div>
+</form>
+  </div>
+</div>

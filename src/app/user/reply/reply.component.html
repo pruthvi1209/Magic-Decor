@@ -1,0 +1,27 @@
+<div class="fullpage">
+  <div class="heading">
+    <h4>Replies from Admin</h4>
+  </div>
+  <div class="contents">
+      <div class="container">
+        <!--<div class="row">
+          <div class="col-md-12" *ngFor = "let reply of replies">
+            <div  class = "replySection" *ngIf = "reply.to == currentuser">
+              <h3>Sender: {{reply.from}}</h3>
+              <p>Message: {{reply.reply}}</p>
+            </div>
+          </div>
+        </div>-->
+        <div *ngFor = "let reply of replies">
+        <div class = "panel panel-default" *ngIf = "reply.to_id == currentuser">
+          <div class = "panel-heading">
+            {{reply.from}}
+          </div>
+          <div class = "panel-body">
+            {{reply.reply}}
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>

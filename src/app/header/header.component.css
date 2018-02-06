@@ -1,0 +1,144 @@
+body {
+	background: #343436;
+	color: #f7f7f7;
+	font-family: 'Montserrat', sans-serif;
+}
+#logo{
+	border-radius: 100px;
+}
+h1,
+h2 {
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+	color: #cdcdcd;
+}
+.navbar {
+    margin-bottom: 0;
+    padding-right: 2%;
+	color: #343436;
+}
+
+.navbar-inverse {
+	background: #343436;
+	border: 0;
+}
+
+.navbar-inverse .navbar-nav li a {
+	color: #f7f7f7;
+	font-size: 16px;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: darkorange;
+}
+.navbar-inverse .navbar-nav .dropdown-menu li a:hover {
+	background:  darkorange;
+}
+
+#login{
+    border-left: 2px solid white;
+}
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+.btn-primary:hover {
+	color: darkorange;
+	background-color: white;
+	border-color: white;
+}
+.glyphicon-large {
+	font-size: 100px;
+}
+
+li.activelink{
+  background: darkorange;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.brand{
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #343436;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+span{
+    padding-right : 10px;
+}
+a{
+    font-family: Georgia, Serif;  
+    font-style:italic;
+    font-weight: bold;
+    color : ivory;
+	cursor: pointer;    
+}
+ul a{
+    font-style: normal;
+    font-weight: normal;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sidebar-toggle-box {
+    float: left;
+    padding-right: 15px;
+	margin-top: 20px;
+	background-color: aqua;
+}
+.sidebar-toggle-box .fa-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+}
+
+/* The animation code */
+@keyframes example {
+    0%   {left:0px; top:0px; }
+    25%  {left:200px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+#logo {
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+}

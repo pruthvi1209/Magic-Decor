@@ -1,0 +1,5 @@
+[0124/214607.175:ERROR:process_reader_win.cc(242)] ReadMemory at 0x5bb80000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0124/214607.180:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\63.0.3239.132\chrome_child.dll
+[0124/214607.200:ERROR:process_reader_win.cc(242)] ReadMemory at 0x4fea000 of 24576 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0124/214607.200:ERROR:crash_report_exception_handler.cc(116)] WriteEverything failed
+[0124/214607.203:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

@@ -1,0 +1,55 @@
+h3{
+  font-weight: bold;
+  color:black;
+  font-family: Georgia, Serif;
+  padding-bottom: 10px;
+}
+.panel-body{
+  font-family: Georgia, Serif;
+  background: #009688; 
+  color : ivory;
+}
+span{
+  font-weight: bold;
+}
+.img-thumbnail{
+  height: 200px;
+  width: 370px;
+}
+.panel{
+   box-shadow: 10px 10px 5px grey;
+}
+.nav>a{
+  padding:20px;
+}
+.nav>li:hover a{
+  border-radius:3px;
+  border: 1px solid #ccc;
+  border-bottom: 0px;
+  background: #fff;
+}
+.nav>li:focus a{
+  background: #fff;
+}
+.card{
+  float:left;
+  width:300px;
+  margin:10px;
+}
+.obj-img{
+  width:100%;
+  height:200px;
+}
+.text{
+  font-family: Georgia, Serif;
+  font-weight: bold;
+  font-style: italic;  
+    font-size : 12pt;
+  }
+  table{
+    padding-top:15px; 
+  }
+  .panel-body,p{
+  font-family: Georgia, Serif;
+  font-style: italic;    
+  }

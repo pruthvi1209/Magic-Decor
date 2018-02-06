@@ -1,0 +1,126 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div class="fullpage">
+  <div class="heading">
+    <h4>{{category}} | {{roomName| uppercase}}</h4>
+  </div>
+  <div class="contents">
+    <div class="container-fluid">
+      <div class="row" id="playArea">
+        <div class="row show-grid">
+          <div class="col-sm-2">
+            <div>
+              <kbd class="scrollhead">Objects</kbd>
+              <div id="scrollobject">
+                <img  (click)="loadObject( object.name )" *ngFor="let object of a_objects" class="block" src="../assets/models/{{object.name}}/{{object.name}}Thumb.jpg" style="cursor:pointer;">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="row tools">
+              <i class="glyphicon glyphicon-camera" id="shot" title="Get Snapshot"></i>
+              <i class="glyphicon glyphicon-floppy-disk" id="save" data-toggle="modal" data-target='#saveModal' (click)="desc()" title="Save Project"></i>
+              <i class="glyphicon glyphicon-eye-open" (click)="resetView()" title="Reset View"></i>
+              <i class="glyphicon glyphicon-fullscreen" id="fullscreen" title="Full Screen"></i>
+              <i class="glyphicon glyphicon-info-sign" id="info" data-toggle="modal" data-target="#controls" title="Tool Tip"></i>
+            </div>
+            <div class="row">
+              <div>
+                <div id="myCanvas"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div>
+              <kbd class="scrollhead">Layouts</kbd>
+              <div id="scrolllayout">
+                <div *ngFor="let d of layouts">
+                  <div *ngIf="d.layoutCategory == category">
+                    <img [ngClass]="getActive(d.name)" (click)="swapLayout(d.name)" src='{{d.thumbnail}}' title='{{d.name}}'>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modals to appear even in fullscreen view -->
+            <div class="modal fade" role="dialog" id="controls">
+          <div class="row">
+            <h3>Know your Superpowers</h3>
+            <hr [ngStyle] = "{'color':'#000', 'width' : '250px'}">
+          </div>
+          <div class="modal-body">
+            <div class=frame>
+              <span class="helper"></span>
+              <img class="controls" src="../../../assets/Controls.png" />
+            </div>
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-lg btn-round-lg btn-warning" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+        <div class="modal fade" id="saveModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" *ngIf="!saved ;else headerok">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Save As...</h4>
+              </div>
+              <div class="modal-body">
+                <div *ngIf="!saved ;else ok">
+                  <form [formGroup]="saveForm" (ngSubmit)="saveProject()" id="saveForm" novalidate>
+                    <div class="form-group">
+                      
+                      <img id="preview" alt="Preview Image" height="190" width="400px">
+                      <div style="padding-bottom: 3%; padding-top: 3%;">
+                         <span>Project Name</span>
+                        <input type="text" class="form-control" formControlName="projectName" required>
+                        <div *ngIf="projectName.invalid && (projectName.dirty || projectName.touched)">
+                          <p style="color: red">Field required</p>
+                        </div>
+                      </div>
+                      <div style="padding-bottom: 3%;">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" formControlName="projectDescription" required></textarea>
+                        <div  *ngIf="projectDescription.invalid && (projectDescription.dirty || projectDescription.touched)">
+                            <p style="color: red"> Field required</p>
+                        </div>
+                        <div class="checkbox">
+                          <label *ngIf = 'fav == true'>
+                            <input type="checkbox" id="favorite" (click)="addFavorite()" checked> Add to Favorites
+                          </label>
+                          <label *ngIf = 'fav == false'>
+                              <input type="checkbox" id="favorite" (click)="addFavorite()"> Add to Favorites
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </form>
+                  <span class="label " style="font-size: 16px; color:black; ">Designed By :{{this.user}} </span><br>
+                  <span class="label" style="font-size: 16px; color:black; ">Credted On {{this.createdDate}}</span>
+                </div>
+                <ng-template class="modal-header" #headerok>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:2%">&times;</button>
+                  <h4>Saved Successfully</h4>
+                </ng-template>
+                <ng-template class="modal-body"  #ok>
+                  <img id="preview" alt="Preview Image" src={{imageURL}} height="450px" width="450px">
+                  <div style="margin-left: 35%;margin-top: 5%; "><button  style="background-color:#ffa500; border: 1px solid #c78100 ; font-weight: bold; color:white" type="button" class="btn btn-default" id="close" data-dismiss="modal" routerLink={{nextpage}}>Visit Your Profile</button></div>
+                </ng-template>
+              </div>
+              <div class="modal-footer" *ngIf="!saved ;else footerok">
+               <label style="padding-right : 7px;" *ngIf="objid">Save as new <input type = "checkbox" (click) = "saveAsNew()"></label><br><br>
+                <button type="button" class="btn btn-default" id="close" data-dismiss="modal" (click)="enableKey()">Close</button>
+                <input type="submit" class="btn btn-primary" value="Save" form="saveForm" (click)="enableKey()" id="sumbitted">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modals inside fullscreen view end -->
+
+      </div>
+    </div>
+  </div>
+</div>

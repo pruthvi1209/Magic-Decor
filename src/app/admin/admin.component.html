@@ -1,0 +1,76 @@
+<section id="container">
+    
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+            
+                 <p class="centered"><a href="profile.html">
+                         <img src='https://social.mindtree.com/User%20Photos/Profile%20Pictures/{{dp}}_MThumb.jpg?t=63646089488' height = "80" width="70">
+                     </a></p> 
+                 <h5 class="centered">{{name}}</h5> 
+                  
+                <li class="mt">
+                    <a class="active" routerLink="../admin">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+<!--  
+                <li class="sub-menu">
+                    <a routerLink="view-users" >
+                        <i class="fa fa-users"></i>
+                        <span>View Users</span>
+                    </a>
+                </li>-->
+  
+                <li class="sub-menu">
+                    <a>
+                        <i class="fa fa-upload"></i>
+                        <span>Upload</span>
+                    </a>
+                    <ul class="submenu">
+                        <li> 
+                          <a routerLink="layout">
+                            <i class="fa fa-file-image-o"></i>
+                            <span>Layouts</span>
+                            </a>
+                        <li>
+                           <a routerLink="item">
+                              <i class="fa fa-file-image-o"></i>
+                              <span>Items</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="sub-menu">
+                    <a routerLink = "messages">
+                        <i class="fa fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+  
+                <li class="sub-menu">
+                    <a routerLink = "upload-history">
+                        <i class="fa fa-cloud-upload"></i>
+                        <span>Artifacts Uploaded </span>
+                    </a>
+                </li>
+  
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+        </section>
+    </section>
+  </section>

@@ -1,0 +1,33 @@
+<div class = "msgSection container">
+  <h3 class="head">FEEDBACKS</h3>
+  <span class = "status">{{status}}</span>
+<!--<div class="row">
+  <div  class="col-md-6 message" *ngFor = "let message of messages">
+    <h3>{{message.sender}}</h3>
+  <h4>Subject:{{message.msgSubject}}</h4>
+  <p>Message:{{message.msgBody}}</p>
+  <small><i>-{{message.msgDate}}</i></small><br>
+  <br>
+  <div id = "replySection">
+    <input class = "form-control" type = "text" [(ngModel)] = "reply">
+    <br><button class = "btn btn-secondary" (click) = "Reply(message.sender)">Reply</button>
+  </div>
+  </div>
+</div>-->
+<br>
+<div class="row">
+  <div  *ngFor = "let message of messages">
+<div class = "panel panel-default">
+  <div class = "panel-heading"><h3><b>{{message.sender}}</b><small> [{{message.msgDate}}]</small></h3></div>
+  <div class = "panel-body">{{message.msgBody}}</div>
+  <div class = "panel-footer">
+    <p>Your reply</p>
+    <input class = "form-control" type = "text" [(ngModel)] = "reply">
+    <br><button class = "btn btn-secondary" *ngIf = "reply!=''" (click) = "Reply(message.sender, message.sender_id)">Reply</button>
+  <button class = "btn btn-secondary" *ngIf = "reply==''" disabled>Reply</button>
+  
+  </div>
+</div>
+</div>
+</div>
+</div>
